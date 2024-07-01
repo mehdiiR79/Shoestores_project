@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
+        
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -37,7 +38,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         hintColor: LightThemeColors.secondaryTextColor,
         inputDecorationTheme: InputDecorationTheme(
-            border: const OutlineInputBorder(),
+          
+            border: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white)
+            ),
             enabledBorder: OutlineInputBorder(
                 borderSide: BorderSide(
                     color:
@@ -53,7 +57,7 @@ class MyApp extends StatelessWidget {
             titleMedium: defaultTextStyle.apply(
                 color: LightThemeColors.secondaryTextColor),
             bodyMedium:  defaultTextStyle,
-          
+      
             bodySmall: defaultTextStyle.apply(
                 color: LightThemeColors.secondaryTextColor),
             headlineMedium: defaultTextStyle.copyWith(
@@ -64,7 +68,9 @@ class MyApp extends StatelessWidget {
             onSecondary: Colors.white,
             surfaceVariant: Color(0xffF5F5F5)),
       ),
-      home: const Directionality(
+      home: 
+      // HomeScreen()
+      const Directionality(
           textDirection: TextDirection.rtl, child: RootScreen()),
     );
   }

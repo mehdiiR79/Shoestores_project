@@ -39,17 +39,16 @@ class HomeScreen extends StatelessWidget {
                       case 0:
                         return Column(
                           children: [
-                            Container(
-                              height: 56,
-                              alignment: Alignment.center,
-                              child: Image.asset(
-                                'assets/img/nike_logo.png',
-                                fit: BoxFit.fitHeight,
-                                height: 24,
-                              ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                IconButton(onPressed: (){}, icon:Icon( Icons.settings))
+                              ],
                             ),
+                           
                             Container(
                               height: 56,
+                              decoration: BoxDecoration(border: Border.all(color: Colors.grey),borderRadius: BorderRadius.circular(27)),
                               child: TextField(
                                 controller: _searchController,
                                 decoration: InputDecoration(
@@ -64,12 +63,12 @@ class HomeScreen extends StatelessWidget {
                                       child: Icon(CupertinoIcons.search),
                                     ),
                                   ),
-                                  enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(28),
-                                      borderSide: BorderSide(
-                                          width: 1,
-                                          color:
-                                              Theme.of(context).dividerColor)),
+                                  // enabledBorder: OutlineInputBorder(
+                                  //     borderRadius: BorderRadius.circular(28),
+                                  //     borderSide: BorderSide(
+                                  //         width: 1,
+                                  //         color:
+                                  //             Theme.of(context).dividerColor)),
                                   focusedBorder: OutlineInputBorder(
                                       borderRadius: BorderRadius.circular(28),
                                       borderSide: BorderSide(

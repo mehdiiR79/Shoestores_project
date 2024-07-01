@@ -157,10 +157,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                           children: [
                             Text(
                               'نظرات کاربران',
-                              style: Theme
-                                  .of(context)
-                                  .textTheme
-                                  .titleMedium,
+                              style: TextStyle(color: Colors.black,fontWeight: FontWeight.w900,fontSize: 15)
                             ),
                             TextButton(
                                 onPressed: () {

@@ -23,21 +23,18 @@ class ProfileScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                      width: 65,
-                      height: 65,
-                      padding: const EdgeInsets.all(8),
-                      margin: const EdgeInsets.only(top: 32, bottom: 8),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
-                              color: Theme.of(context).dividerColor, width: 1)),
-                      child: Image.asset('assets/img/nike_logo.png')),
-                  Text(isLogin ? authInfo.email : 'کاربر میهمان'),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15,bottom: 15),
+                    child: Icon(Icons.person,color: Colors.blue,size: 50,),
+                  ),
+                  Text(isLogin ? authInfo.email : 'کاربر میهمان',style: TextStyle(color: Colors.grey),),
                   const SizedBox(
                     height: 32,
                   ),
                   const Divider(
+                   indent: 30,
+                   endIndent: 30,
+                    color: Colors.grey,
                     height: 1,
                   ),
                   InkWell(
@@ -59,9 +56,12 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Divider(
-                    height: 1,
-                  ),
+                  // const Divider(
+                  //   indent: 25,
+                  //   endIndent: 25,
+                  //   color: Colors.blue,
+                  //   height: 1,
+                  // ),
                   InkWell(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
@@ -81,9 +81,12 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Divider(
-                    height: 1,
-                  ),
+                  // const Divider(
+                  //  indent: 25,
+                  //   endIndent: 25,
+                  //   color: Colors.blue,
+                  //   height: 1,
+                  // ),
                   InkWell(
                     onTap: () {
                       if (isLogin) {
@@ -139,9 +142,12 @@ class ProfileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const Divider(
-                    height: 1,
-                  ),
+                  // const Divider(
+                  //  indent: 25,
+                  //   endIndent: 25,
+                  //   color: Colors.blue,
+                  //   height: 1,
+                  // ),
                 ],
               ),
             );

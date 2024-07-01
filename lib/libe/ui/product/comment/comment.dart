@@ -13,10 +13,10 @@ class CommentItem extends StatelessWidget {
     final ThemeData themeData = Theme.of(context);
     return Container(
       decoration: BoxDecoration(
-          border: Border.all(
-            color: themeData.dividerColor,
-            width: 1,
-          ),
+          // border: Border.all(
+          //   color: Colors.grey,
+          //   width: 1,
+          // ),
           borderRadius: BorderRadius.circular(4)),
       padding: const EdgeInsets.all(12),
       margin: const EdgeInsets.fromLTRB(8, 0, 8, 8),
@@ -30,17 +30,17 @@ class CommentItem extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(comment.title),
+                  Text(comment.title,style: TextStyle(fontWeight: FontWeight.bold,color: Colors.blue),),
                   const SizedBox(
                     height: 4,
                   ),
                   Text(
                     comment.email,
-                    style: themeData.textTheme.bodyMedium,
+                    style: TextStyle(color: Colors.grey,fontSize: 12),
                   ),
                 ],
               ),
-              Text(comment.date, style: themeData.textTheme.bodyMedium),
+              Text(comment.date,style: TextStyle(color: Colors.grey,fontSize: 12)),
             ],
           ),
           const SizedBox(

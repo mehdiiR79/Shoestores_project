@@ -81,11 +81,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Image.asset(
-                        'assets/img/nike_logo.png',
-                        color: Colors.white,
-                        width: 120,
-                      ),
+                     
                       const SizedBox(
                         height: 24,
                       ),
@@ -107,11 +103,26 @@ class _AuthScreenState extends State<AuthScreen> {
                       const SizedBox(
                         height: 24,
                       ),
-                      TextField(
-                        controller: usernameController,
-                        keyboardType: TextInputType.emailAddress,
-                        decoration: const InputDecoration(
-                          label: Text('آدرس ایمیل'),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height:60,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.white)
+                        ),
+                        child: TextField(
+                          style: TextStyle(
+                            color: Colors.white
+                          ),
+                          controller: usernameController,
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: const InputDecoration(
+                          
+                            
+                           
+                           
+                           
+                          ),
                         ),
                       ),
                       const SizedBox(
@@ -126,6 +137,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       ),
                       ElevatedButton(
                         onPressed: () async {
+                        
                           // await authRepository.login("test@gmail.com", "123456");
                           BlocProvider.of<AuthBloc>(context).add(
                               AuthButtonIsClicked(usernameController.text,
@@ -195,24 +207,33 @@ class _PasswordTextFieldState extends State<_PasswordTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      controller: widget.controller,
-      keyboardType: TextInputType.visiblePassword,
-      obscureText: obsecureText,
-      decoration: InputDecoration(
-        suffixIcon: IconButton(
-            onPressed: () {
-              setState(() {
-                obsecureText = !obsecureText;
-              });
-            },
-            icon: Icon(
-              obsecureText
-                  ? Icons.visibility_outlined
-                  : Icons.visibility_off_outlined,
-              color: widget.onBackground.withOpacity(0.6),
-            )),
-        label: const Text('رمز عبور'),
+    return Container(
+       width: MediaQuery.of(context).size.width,
+                        height:60,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.white)
+                        ),
+      child: TextField(
+        style: TextStyle(color: Colors.white),
+        controller: widget.controller,
+        keyboardType: TextInputType.visiblePassword,
+        obscureText: obsecureText,
+        decoration: InputDecoration(
+          suffixIcon: IconButton(
+              onPressed: () {
+                setState(() {
+                  obsecureText = !obsecureText;
+                });
+              },
+              icon: Icon(
+                obsecureText
+                    ? Icons.visibility_outlined
+                    : Icons.visibility_off_outlined,
+                color: widget.onBackground.withOpacity(0.6),
+              )),
+         
+        ),
       ),
     );
   }
