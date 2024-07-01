@@ -29,9 +29,9 @@ class ShippingScreen extends StatefulWidget {
 
 class _ShippingScreenState extends State<ShippingScreen> {
   StreamSubscription? subscription;
-  final firstNameController = TextEditingController(text: 'سعید');
-  final lastNameController = TextEditingController(text: 'شاهینی');
-  final phoneNumberController = TextEditingController(text: '09123445678');
+  final firstNameController = TextEditingController(text: 'مهدی');
+  final lastNameController = TextEditingController(text: 'معتمدی');
+  final phoneNumberController = TextEditingController(text: '');
   final postalCodeController = TextEditingController(text: '1234567890');
   final addressController = TextEditingController(
       text: 'سعادت آباد، میدان کاج، خیابان مروارید، پلاک ۱۳');
